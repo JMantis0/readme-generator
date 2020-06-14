@@ -4,56 +4,59 @@ const inq = require('inquirer');
 const questions = [
 	{
 		type: 'input',
-		name: 'User entry',
-		message: ' GitHub username: ',
-
-	},
-	{
-		type: 'list',
-		name: 'Badge selection',
-		message: 'Select badge(s):',
-		choices: ['']
-
+		name: 'username',
+		message: ' GitHub username: '
 	},
 	{
 		type: 'input',
-		name: 'Description',
-		message: 'Enter Project Description:'
+		name: 'title',
+		message: 'Project Title: '
+	},
+	{
+		type: 'input',
+		name: 'description',
+		message: 'Project Description: '
+	},
+	{
+		type: 'confirm',
+		name: 'tableOfContents',
+		message: 'Include Table of Contents?'
+	},
+	{
+		type: 'input',
+		name: 'installation',
+		message: 'Installation instructions: '
+	},
+	{
+		type: 'input',
+		name: 'usage',
+		message: 'Usage instructions: '
+	},
+	{
+		type: 'input',
+		name: 'credits',
+		message: 'Credits/Contributors: '
 	},
 	{
 		type: 'Input',
-		name: 'Table of Contents',
-		message: 'Enter a Table of Contents'
+		name: 'license',
+		message: 'License: '
 	},
 	{
-		type: 'Input',
-		name: 'Installation',
-		message: 'Enter installation instructions'
+		type: 'list',
+		name: 'badge',
+		message: 'Select badge(s) to include: ',
+		choices: ['']
 	},
 	{
-		type: 'Input',
-		name: 'Usage',
-		message: 'Enter usage section'
+		type: 'input',
+		name: 'tests',
+		message: 'Tests: '
 	},
 	{
-		type: 'Input',
-		name: 'License',
-		message: 'Enter License'
-	},
-	{
-		type: 'Input',
-		name: 'Contributing',
-		message: 'Enter contributors'
-	},
-	{
-		type: 'Input',
-		name: 'Tests',
-		message: 'Enter test section'
-	},
-	{
-		type: 'Input',
-		name: 'Questions',
-		message: 'Question section'
+		type: 'input',
+		name: 'questions',
+		message: 'Questions: '
 	}
 ];
 
@@ -64,7 +67,50 @@ function init() {
 	console.log('Welcome to the Readme Generator.\n  Enter the following information:')
 	inq.prompt(questions
 		).then(answers => {
-		console.log(answers);
+
+			//  Compose the readme from the answers object here.
+			let fileContent = 
+			`## ${answers.title}\n\n` +
+			`## Description\n\n` +
+			`${answers.description}\n\n`;
+
+			if (answers.tableOfContents) {
+				//concatenate table of contents to fileContent variable
+				fileContent += 
+				`## Table of Contents\n\n` +
+				`* [Installation](#installation)\n` +
+				`* [Usage](#usage)\n` +
+				`* [Credits](#credits)\n` +
+				`* [License](#license)\n` +
+				`* [Badges](#badges)\n` +
+				`* [Contributors](#contributors)\n` +
+				`* [Tests](#tests)\n\n`;
+			}
+
+			fileContent += 
+			`## Installation\n\n` + 
+			`${answers.installation}\n\n` +
+			`## Usage\n\n` +
+			`${answers.usage}\n\n` +
+			`## Credits\n\n` +
+			`${answers.credits}\n\n` +
+			`## License\n\n` +
+			`${answers.license}\n\n` +
+			`## Badges\n\n` +
+			//add badges here
+			`## Credits and Contributors\n\n` +
+			`${answers.credits}\n\n` +
+			`## Tests\n\n` +
+			`${answers.tests}\n\n` +
+			`## Questions\n\n` +
+			`${answers.questions}`
+
+
+			
+			fs.writeFile('readme.md', fileContent, function() {
+				console.log('Successfully created readme.md');
+			});
+
 	}).catch(error => {
 		if (error) {
 			console.log(error);

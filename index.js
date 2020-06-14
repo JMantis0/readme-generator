@@ -35,7 +35,7 @@ const questions = [
 	{
 		type: 'input',
 		name: 'credits',
-		message: 'Credits/Contributors: '
+		message: 'Credits: '
 	},
 	{
 		type: 'Input',
@@ -47,6 +47,11 @@ const questions = [
 		name: 'badge',
 		message: 'Select badge(s) to include: ',
 		choices: ['']
+	},
+	{
+		type: 'input',
+		name: 'contributing',
+		message: 'How to contribute: '
 	},
 	{
 		type: 'input',
@@ -83,7 +88,7 @@ function init() {
 				`* [Credits](#credits)\n` +
 				`* [License](#license)\n` +
 				`* [Badges](#badges)\n` +
-				`* [Contributors](#contributors)\n` +
+				`* [Contributing](#contributing)\n` +
 				`* [Tests](#tests)\n\n`;
 			}
 
@@ -96,10 +101,8 @@ function init() {
 			`${answers.credits}\n\n` +
 			`## License\n\n` +
 			`${answers.license}\n\n` +
-			`## Badges\n\n` +
-			//add badges here
-			`## Credits and Contributors\n\n` +
-			`${answers.credits}\n\n` +
+			`## Contributing\n\n` +
+			`${answers.contributing}\n\n` +
 			`## Tests\n\n` +
 			`${answers.tests}\n\n` +
 			`## Questions\n\n` +
@@ -107,7 +110,7 @@ function init() {
 
 
 			
-			fs.writeFile('readme.md', fileContent, function() {
+			fs.writeFile('readme2.md', fileContent, function() {
 				console.log('Successfully created readme.md');
 			});
 

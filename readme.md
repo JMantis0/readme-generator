@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is an command-line node application that aids developers in the generation of a quiality readme for repositories on GitHub.
+This project is an command-line node application that aids developers in the generation of a quality readme for repositories on GitHub.
 
 ## Table of Contents
 
@@ -14,32 +14,38 @@ This project is an command-line node application that aids developers in the gen
 * [Contributors](#contributors)
 * [Tests](#tests)
 
-## Installation
+## Installation and Usage
 
-clone repo to your directory\n Open terminal, navigate to working directory, enter command npm i, enter command node index.js
+1) Install node.  Use the [package manager][] of your choice.
+2) Clone this repository
+3) Execute `cd readme-generator`
+4) Execute `node index.js`
+5) Follow in-app prompts
 
-## Usage
-
-Navigate to working directory in terminal, enter command node index.js and follow the prompts in the terminal.
+[package manager]: https://nodejs.org/en/download/package-manager/
 
 ## Credits
 
-Trilogy, github, Dan, Alex, Marlon
+Trilogy, University of Washington
 
 ## License
 
-Freeware
+Copyright (c) 2020 Jesse Mazur
 
-## Badges
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-## Credits and Contributors
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Trilogy, github, Dan, Alex, Marlon
-
-## Tests
-
-None
-
-## Questions
-
-None
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

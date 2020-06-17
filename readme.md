@@ -15,9 +15,10 @@ This project is an command-line node application that aids developers in the gen
 
 1) Install node.  Use the [package manager][] of your choice.
 2) Clone this repository
-3) Execute `cd readme-generator`
-4) Execute `node index.js`
-5) Follow in-app prompts
+3) Execute command `cd readme-generator`
+4) Execute command `npm i`
+5) Execute command `node index.js`
+6) Follow in-app prompts
 
 [package manager]: https://nodejs.org/en/download/package-manager/
 

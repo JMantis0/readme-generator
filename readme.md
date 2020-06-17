@@ -10,9 +10,6 @@ This project is an command-line node application that aids developers in the gen
 * [Usage](#usage)
 * [Credits](#credits)
 * [License](#license)
-* [Badges](#badges)
-* [Contributors](#contributors)
-* [Tests](#tests)
 
 ## Installation and Usage
 

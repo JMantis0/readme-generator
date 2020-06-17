@@ -1,5 +1,5 @@
 ## Readme-Generator
-
+![GitHub repo size](https://img.shields.io/github/repo-size/JMantis0/readme-generator)  ![GitHub language count](https://img.shields.io/github/languages/count/JMantis0/readme-generator)  ![GitHub top language](https://img.shields.io/github/languages/top/JMantis0/readme-generator)
 ## Description
 
 This project is an command-line node application that aids developers in the generation of a quality readme for repositories on GitHub.
@@ -10,17 +10,15 @@ This project is an command-line node application that aids developers in the gen
 * [Usage](#usage)
 * [Credits](#credits)
 * [License](#license)
-* [Badges](#badges)
-* [Contributors](#contributors)
-* [Tests](#tests)
 
 ## Installation and Usage
 
 1) Install node.  Use the [package manager][] of your choice.
 2) Clone this repository
-3) Execute `cd readme-generator`
-4) Execute `node index.js`
-5) Follow in-app prompts
+3) Execute command `cd readme-generator`
+4) Execute command `npm i`
+5) Execute command `node index.js`
+6) Follow in-app prompts
 
 [package manager]: https://nodejs.org/en/download/package-manager/
 

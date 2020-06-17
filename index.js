@@ -4,8 +4,18 @@ const inq = require('inquirer');
 const questions = [
 	{
 		type: 'input',
+		name: 'fullName',
+		message: 'Your full name: '
+	},
+	{
+		type: 'input',
 		name: 'username',
 		message: 'GitHub username: '
+	},
+	{
+		type: 'input',
+		name: 'repo',
+		message: 'Repository name: '
 	},
 	{
 		type: 'input',
@@ -38,15 +48,16 @@ const questions = [
 		message: 'Credits: '
 	},
 	{
-		type: 'Input',
+		type: 'list',
 		name: 'license',
-		message: 'License: '
+		message: 'Choose your license: ',
+		choices: ['MIT License','ISC License', 'None']
 	},
 	{
-		type: 'list',
+		type: 'checkbox',
 		name: 'badge',
 		message: 'Select badge(s) to include: ',
-		choices: ['']
+		choices: ['Language Count', 'Repo-Size', 'Top Language']
 	},
 	{
 		type: 'input',

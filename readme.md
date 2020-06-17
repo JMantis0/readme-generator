@@ -9,7 +9,7 @@ This project is a command-line node application that aids developers in the gene
 
 ## Table of Contents
 
-* [Installation/Usage](#installation and usage)
+* [Installation](#installation)
 * [Credits](#credits)
 * [License](#license)
 

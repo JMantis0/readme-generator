@@ -2,7 +2,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/JMantis0/readme-generator)  ![GitHub language count](https://img.shields.io/github/languages/count/JMantis0/readme-generator)  ![GitHub top language](https://img.shields.io/github/languages/top/JMantis0/readme-generator)
 ## Description
 
-This project is an command-line node application that aids developers in the generation of a quality readme for repositories on GitHub.
+This project is a command-line node application that aids developers in the generation of a quality readme for repositories on GitHub.
 
 ## Table of Contents
 
